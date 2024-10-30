@@ -1,0 +1,57 @@
+.c4d-instagram {
+	margin: auto -5px;
+	&:after {
+		content: '';
+		display: block;
+		clear: both;
+	}
+	.item {
+		width: 50%;
+		float: left;
+		.item-inner {
+			margin: 10px 5px;
+			img {
+				width: 100%;
+				height: auto;
+			}
+			.image-link {
+				display: block;
+				position: relative;
+				margin: auto;
+				padding: 0;
+				&:after {
+					content: '';
+					position: absolute;
+					top: 0;
+					right: 0;
+					bottom: 0;
+					left: 0;
+					margin: auto;
+					background: rgba(#000, 0.3);
+					z-index: 9;
+					opacity: 0;
+					transition: all 0.3s;	
+				}
+				&:before {
+					position: absolute;
+					content: "\f002";
+					font-family: 'FontAwesome';
+					font-size: 40px;
+					color: #fff;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+					z-index: 10;
+					opacity: 0;
+					transition: opacity 0.3s;
+				}
+				&:hover {
+					&:after,
+					&:before {
+						opacity: 1;
+					}
+				}
+			}
+		}
+	}
+}
